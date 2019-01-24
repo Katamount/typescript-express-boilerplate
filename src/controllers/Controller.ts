@@ -2,7 +2,8 @@ import resourceDAO from '../models/ResourceDAO';
 import { ResourcePost, ResourceGet } from './input/Resource';
 import { handleError } from '../util/Errors';
 
-export class Controller {
+class Controller {
+
     public async newResource(body){
         try{
             const input = new ResourcePost(body.name, body.description);
@@ -30,4 +31,4 @@ export class Controller {
     }
 }
 
-export const Controller = new Controller();
+export const controller = new Controller();

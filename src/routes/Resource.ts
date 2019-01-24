@@ -1,5 +1,7 @@
 import * as express from 'express';
 import { controller } from '../controllers/Controller';
+import * as HttpStatus from 'http-status-codes';
+import { logger } from '../util/Logger';
 
 class Resource {
     public router: express.Router = express.Router();
@@ -17,7 +19,6 @@ class Resource {
             } catch (error) {
                 res.status(error.status).send(error.body());
             }
-            
         });
 
         this.router.get('/', async (req: express.Request, res: express.Response) => {
@@ -28,8 +29,8 @@ class Resource {
             } catch (error) {
                 res.status(error.status).send(error.body());
             }
-            
         });
+
     }
 }
 
