@@ -15,7 +15,7 @@ class Resource {
             try {
                 logger.debug("POST /resource: " + JSON.stringify(req.body))
                 let r = await controller.newResource(req.body);
-                res.status(HttpStatus.OK).send(r);
+                res.status(HttpStatus.CREATED).send(r);
             } catch (error) {
                 res.status(error.status).send(error.body());
             }
