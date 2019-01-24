@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "API boilerplate in typescript powered by express",
+  "main": "server.js",
+  "scripts": {
+    "build:dev": "webpack --config webpack.dev.js",
+    "dev": "nodemon server.js",
+    "start": "node dist/app.bundle.js",
+    "build:prod": "webpack --config webpack.prod.js"
+  },
+  "author": "Katamount",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "body-parser": "^1.18.3",
+    "class-validator": "^0.9.1",
+    "express": "^4.16.4",
+    "http-status-codes": "^1.3.0",
+    "morgan": "^1.9.1",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.0",
+    "nodemon": "^1.18.9",
+    "ts-loader": "^5.3.1",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.5",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
